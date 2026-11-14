@@ -1,0 +1,7 @@
+1. Java Web 开发框架（最常见）
+
+• 全称：Struts + Spring + Hibernate
+• 简介：这是早年 Java EE（J2EE）开发中非常流行的一种经典轻量级 Web 应用程序开源集成框架：
+	• Struts：负责表现层（MVC 架构中的 Controller 控制层）。
+	• Spring：负责业务逻辑层，提供 IOC（控制反转）和 AOP（面向切面编程）等核心容器功能。
+	• Hibernate：负责持久层（ORM 框架），用于数据库操作与对象映射

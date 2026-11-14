@@ -1,0 +1,448 @@
+{
+  "A": [
+    {
+      "q": "年假多少天？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：员工依法享有年休假，每年可休 15 天，超出部分按事假处理。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n根据员工手册（2024版）第一章年假制度：\n- 正式员工入职满一年后，享有带薪年假 **15 天**；\n- 工作满五年后，年假增加至 **20 天**。\n\n温馨提示：年假需提前 3 个工作日通过内部系统申请，经直属主管批准后生效。当年未休完的年假可结转至次年 3 月 31 日，逾期作废。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：\n\n根据公司员工手册（2024版）的年假制度：\n\n- **入职满一年的正式员工**：享有带薪年假 **15 天**\n- **工作满五年后**：年假增加至 **20 天**\n\n温馨提示：\n1. 年假需提前 3 个工作日通过内部系统申请，经直属主管批准后生效；\n2. 当年未休完的年假可结转至次年 3 月 31 日，逾期作废。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        }
+      }
+    },
+    {
+      "q": "报销什么时候截止？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：报销需在 3 个工作日内完成提交，并附上相关证明。逾期将影响个人信用记录。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n根据员工手册的报销流程规定，**每月 25 日为报销截止日**，25 日之后提交的报销将顺延至下月处理。\n\n另外温馨提示：差旅报销需在出差结束后 10 个工作日内提交，并附上发票原件与行程单；单笔金额超过 5000 元的报销还需部门总监二次审批。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：\n\n根据员工手册规定，**每月 25 日为报销截止日**，之后提交的报销将顺延至下月处理。\n\n另外提醒您：\n- 差旅报销需在出差结束后 **10 个工作日内**提交，并附上发票原件与行程单；\n- 单笔金额超过 **5000 元**的报销需部门总监二次审批。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        }
+      }
+    },
+    {
+      "q": "试用期能远程办公吗？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n根据员工手册规定，新入职员工试用期内不适用远程办公政策，因此试用期期间不能申请远程办公。待您转正后，即可申请远程办公（每周最多2天，需提前一天在系统中登记）。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：\n\n根据《星辰科技员工手册（2024版）》第三章远程办公的规定，**新入职员工试用期内不适用远程办公政策**。\n\n也就是说，试用期内的员工暂时无法申请远程办公，需要待试用期结束后方可申请。另外提醒您，正式员工申请远程办公时，每周最多可申请 2 天，且需提前一天在系统中登记。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        }
+      }
+    },
+    {
+      "q": "大额报销需要谁审批？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：单笔超过 5000 元的报销需部门主管与总经理双重审批。请在系统中提交申请并附发票与收据。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n根据《星辰科技员工手册（2024版）》第二章报销流程的规定：单笔金额超过 5000 元的报销需部门总监二次审批。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：\n\n根据公司报销制度，单笔金额超过 5000 元的报销需要部门总监进行二次审批。\n\n另外提醒您：差旅报销需在出差结束后 10 个工作日内提交，附上发票原件与行程单；每月 25 日为报销截止日，之后提交的将顺延至下月处理。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        }
+      }
+    },
+    {
+      "q": "每周能远程几天？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：员工每周可申请最多 3 天远程办公，需提前一天通过企业微信提交申请。请确保在休息日使用远程办公功能。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n根据员工手册第三章远程办公规定，员工每周可申请**最多 2 天**远程办公。\n\n需要注意以下几点：\n1. 需提前一天在系统中登记；\n2. 远程办公期间需保持在线，响应时间不超过 30 分钟；\n3. 新入职员工试用期内不适用远程办公政策。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：\n\n根据公司远程办公政策，员工每周可申请**最多 2 天**远程办公。\n\n需要注意以下几点：\n- 需提前一天在系统中登记；\n- 远程办公期间需保持在线，响应时间不超过 30 分钟；\n- 新入职员工在试用期内不适用远程办公政策。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        }
+      }
+    },
+    {
+      "q": "婚假多少天？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：员工依法享有婚假 10 天，需在办理结婚登记后一年内使用。逾期按月折抵。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：员工依法享有婚假 10 天，需在办理结婚登记后一年内使用。逾期按月折抵。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "加班有加班费吗？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "离职需要提前多久？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：试用期内提前 3 天、转正后提前 15 天提交书面申请与直属主管沟通。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：试用期内提前 3 天、转正后提前 15 天提交书面申请与直属主管沟通。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "公积金比例是多少？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：员工在职期间缴纳的住房公积金按当地规定基数的 8% 计算。离职后余额归个人。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：员工在职期间缴纳的住房公积金按当地规定基数的 8% 计算。离职后余额归个人。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "停车位怎么申请？",
+      "expect": "answer",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系行政确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": false,
+          "ok": false,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系行政确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    }
+  ],
+  "C": [
+    {
+      "q": "公司有股票期权吗？",
+      "expect": "reject",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "年终奖什么时候发？",
+      "expect": "reject",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "公司有心理咨询服务吗？",
+      "expect": "reject",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您咨询行政或同事推荐。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您咨询行政或同事推荐。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "能远程面试吗？",
+      "expect": "reject",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "能申请调到海外分部吗？",
+      "expect": "reject",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    },
+    {
+      "q": "公司有员工宿舍吗？",
+      "expect": "reject",
+      "schemes": {
+        "纯微调": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "ft"
+        },
+        "纯RAG": {
+          "ans": "您好，星辰科技为您解答：\n\n该问题暂不在我的知识范围内，建议您联系 HR 确认。\n\n还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag"
+        },
+        "RAG优先": {
+          "ans": "您好，星辰科技为您解答：该问题暂不在我的知识范围内，建议您联系 HR 确认。还有什么可以帮您？",
+          "style_ok": true,
+          "content_ok": true,
+          "ok": true,
+          "path": "rag→ft"
+        }
+      }
+    }
+  ],
+  "rates_a": {
+    "纯微调": 0.4,
+    "纯RAG": 0.5,
+    "RAG优先": 0.7
+  },
+  "rates_c": {
+    "纯微调": 1.0,
+    "纯RAG": 1.0,
+    "RAG优先": 1.0
+  }
+}
